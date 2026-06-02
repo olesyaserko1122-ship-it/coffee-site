@@ -1,0 +1,328 @@
+/* ========== ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ ========== */
+/* Переменные (цветовая гамма кофейни) */
+:root {
+  --coffee-dark: #3E2723;
+  --coffee-medium: #5D4037;
+  --coffee-light: #8D6E63;
+  --warm-cream: #FDF8F0;
+  --coffee-cream: #FFF9F0;
+  --text-dark: #2C1A0E;
+  --text-light: #F5EDE0;
+  --accent-gold: #D4A056;
+  --accent-cinnamon: #B8652A;
+}
+/* Общий контейнер страницы */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+/* ========== ЗАГОЛОВКИ ========== */
+.page h1 {
+  color: var(--text-dark);
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.page h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-gold);
+  border-radius: 2px;
+}
+
+.page h2 {
+  color: var(--accent-gold);
+  font-size: 24px;
+  margin: 25px 0 15px;
+  font-weight: 600;
+}
+/* ========== ТЕКСТ ========== */
+.page p {
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+/* ========== ТАБЛИЦА МЕНЮ ========== */
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-table th {
+  background: linear-gradient(135deg, var(--coffee-medium) 0%, var(--coffee-dark) 100%);
+  color: white;
+  padding: 14px 12px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.menu-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: var(--text-dark);
+}
+
+.menu-table tr:hover {
+  background: rgba(212, 160, 86, 0.08);
+}
+
+.menu-table tr:last-child td {
+  border-bottom: none;
+}
+/* ========== ФОРМА ОБРАТНОЙ СВЯЗИ ========== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(212, 160, 86, 0.2);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-cinnamon) 100%);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+/* ========== ФОТО ОСНОВАТЕЛЯ ========== */
+.founder-photo {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.founder-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--accent-gold);
+  transition: transform 0.3s ease;
+}
+
+.founder-image:hover {
+  transform: scale(1.02);
+}
+/* ========== ГЛАВНАЯ СТРАНИЦА (доп. стили) ========== */
+.slogan {
+  color: var(--accent-gold);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.coffee-image-container {
+  margin: 20px 0;
+}
+
+.coffee-image {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.coffee-image:hover {
+  transform: scale(1.05);
+}
+
+.work-hours {
+  background: rgba(212, 160, 86, 0.15);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.motto {
+  color: var(--accent-cinnamon);
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 20px;
+  font-weight: 500;
+}
+/* ========== СПИСОК КОНТАКТОВ ========== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.contact-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+/* ========== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ (800x600) ========== */
+@media (max-width: 800px) {
+  .page {
+    padding: 15px;
+  }
+
+  .page h1 {
+    font-size: 24px;
+  }
+
+  .page h2 {
+    font-size: 20px;
+  }
+
+  .page p {
+    font-size: 14px;
+  }
+
+  .slogan {
+    font-size: 18px;
+  }
+
+  .coffee-image {
+    width: 120px;
+  }
+
+  .menu-table th,
+  .menu-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .founder-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .work-hours {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+
+  .motto {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+/* ========== ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ (до 600px) ========== */
+@media (max-width: 600px) {
+  .page h1 {
+    font-size: 20px;
+  }
+
+  .coffee-image {
+    width: 100px;
+  }
+
+  .menu-table th,
+  .menu-table td {
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  .founder-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+/* ========== АНИМАЦИИ ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ========== ВСПЛЫВАЮЩЕЕ СООБЩЕНИЕ ОБ УСПЕХЕ ========== */
+.success-message {
+  background: linear-gradient(135deg, #4CAF50 0%, #45A049 100%);
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  font-weight: 600;
+  animation: slideDown 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

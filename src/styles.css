@@ -1,0 +1,240 @@
+/* Общие настройки */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Основной контейнер */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+/* По ТЗ: зеленый блок до 3% высоты */
+/* Используем кофейный оттенок */
+
+header {
+  height: 80px;
+
+  background-color: #6f4e37;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+header h2 {
+  font-size: 20px;
+}
+
+/* MAIN */
+/* По ТЗ: 89% высоты */
+
+main {
+  flex: 1;
+
+  display: flex;
+
+  min-height: 89vh;
+}
+
+/* SECTION */
+/* По ТЗ: 20% ширины, gold */
+
+section {
+  width: 20%;
+
+  background-color: #d2b48c;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Навигация */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #5c4033;
+}
+
+/* Кнопка языка */
+
+button {
+  margin-top: 20px;
+
+  padding: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #6f4e37;
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #5c4033;
+}
+
+/* ARTICLE */
+/* По ТЗ: 60% ширины, blue */
+
+article {
+  width: 60%;
+
+  background-color: #f5deb3;
+
+  padding: 30px;
+
+  color: black;
+}
+
+article h1 {
+  margin-bottom: 20px;
+}
+
+article p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Таблица */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 2px solid #6f4e37;
+}
+
+th {
+  background-color: #c4a484;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* ASIDE */
+/* По ТЗ: 20% ширины, darkturquoise */
+
+aside {
+  width: 20%;
+
+  background-color: #c4a484;
+
+  padding: 20px;
+}
+
+aside h3 {
+  margin-bottom: 15px;
+}
+
+aside p {
+  margin-bottom: 10px;
+
+  background-color: #f5deb3;
+
+  padding: 8px;
+
+  border-radius: 6px;
+}
+
+/* FOOTER */
+/* По ТЗ: красный блок до 4% высоты */
+
+footer {
+  height: 4vh;
+  min-height: 60px;
+
+  background-color: #5c4033;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+/* АДАПТИВНОСТЬ */
+/* Для мобильной версии 800x600 */
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  section,
+  article,
+  aside {
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px 10px;
+  }
+
+  article {
+    min-height: 400px;
+  }
+}
+/* Логотип */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
